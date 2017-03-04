@@ -9,6 +9,8 @@ import {
   determineWinningPlayerForTrick,
 } from 'utils/cards';
 import {
+  RESET_ALL,
+  TRANSFER_SCORES,
   DEAL_CARDS,
   START_HAND,
   PLAYER_PLAY_CARD,
@@ -32,6 +34,13 @@ function removeCardFromPlayer(player: Player, card: Card): Player {
 
 function currentHand(state: CurrentHand = defaultState, action: FSA): CurrentHand {
   switch (action.type) {
+    case RESET_ALL:
+      return defaultState;
+    case TRANSFER_SCORES:
+      return {
+        ...state,
+        number: state.number + 1,
+      };
     case DEAL_CARDS:
       {
         const players = {};

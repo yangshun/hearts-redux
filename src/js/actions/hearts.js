@@ -5,6 +5,14 @@ import type { Deck, Card, PlayerID } from 'types/hearts';
 import _ from 'lodash';
 import { NUMBER_OF_PLAYERS, generateDeck, sortCards } from 'utils/cards';
 
+export const RESET_ALL = 'RESET_ALL';
+export function resetAll(): FSA {
+  return {
+    type: RESET_ALL,
+    payload: null,
+  };
+}
+
 export const DEAL_CARDS = 'DEAL_CARDS';
 export function dealCards(): FSA {
   const deck: Deck = generateDeck();
@@ -30,5 +38,13 @@ export function playerPlayCard(playerID: PlayerID, card: Card): FSA {
       playerID,
       card,
     },
+  };
+}
+
+export const TRANSFER_SCORES = 'TRANSFER_SCORES';
+export function transferScores(): FSA {
+  return {
+    type: TRANSFER_SCORES,
+    payload: null,
   };
 }
