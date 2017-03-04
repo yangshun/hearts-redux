@@ -7,9 +7,3 @@ export type FSA = {
   meta?: any,
   error?: boolean,
 };
-
-export type RequestStates = {
-  isPending: boolean,
-  isSuccessful: boolean,
-  isFailure: boolean,
-};

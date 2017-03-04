@@ -29,13 +29,7 @@ export default function AppContainer(props: Props) {
                 <Link className="nav-link" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/users">Users</Link>
-              </li>
-              <li className="nav-item">
                 <Link className="nav-link" to="/counter">Counter</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/reddits">Reddit</Link>
               </li>
             </ul>
           </div>
