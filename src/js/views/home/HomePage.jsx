@@ -1,18 +1,15 @@
 // @flow
 import React from 'react';
 import DocumentTitle from 'react-document-title';
-
-import reactLogoPath from 'img/react-logo.svg';
-import reduxLogoPath from 'img/redux-logo.svg';
+import { Link } from 'react-router';
 
 const HomePage = () => (
-  <DocumentTitle title="React Redux Starter">
+  <DocumentTitle title="Hearts">
     <div>
-      <h1>React Redux Starter</h1>
+      <h1>Hearts</h1>
       <hr/>
       <div>
-        <img src={reactLogoPath} alt="React Logo" className="logo"/>
-        <img src={reduxLogoPath} alt="Redux Logo" className="logo"/>
+        <Link className="btn btn-primary" to="/game">Play</Link>
       </div>
     </div>
   </DocumentTitle>

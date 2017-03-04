@@ -10,6 +10,7 @@ import NotFoundPage from 'views/not-found/NotFoundPage';
 
 import HomePage from 'views/home/HomePage';
 import CountersPage from 'views/counters/CountersPage';
+import GamePage from 'views/game/GamePage';
 
 const store = configureStore();
 const history = syncHistoryWithStore(useRouterHistory(createHistory)({
@@ -23,6 +24,7 @@ export default function () {
         <Route path="/" component={AppContainer}>
           <IndexRoute component={HomePage}/>
           <Route path="/counter" component={CountersPage}/>
+          <Route path="/game" component={GamePage}/>
           <Route path="*" component={NotFoundPage}/>
         </Route>
       </Router>

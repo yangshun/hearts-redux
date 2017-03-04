@@ -44,6 +44,7 @@ module.exports = {
     'jsx-a11y/no-static-element-interactions': 'off',
     'no-duplicate-imports': 'off',
     'no-underscore-dangle': ['error', { 'allowAfterThis': true, 'allowAfterSuper': true }],
+    'quote-props': 'off',
     'react/jsx-filename-extension': 'off',
     'react/jsx-first-prop-new-line': ['error', 'never'],
     // It just looks nicer without the space.
