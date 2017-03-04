@@ -3,7 +3,7 @@ import thunk from 'redux-thunk';
 import rootReducer from 'reducers';
 
 // Creates a preconfigured store for this example.
-export default function configureStore() {
+export default function configureStore(defaultState) {
   const middlewares = [thunk];
   if (process.env.NODE_ENV === 'development') {
     /* eslint-disable */
@@ -16,5 +16,5 @@ export default function configureStore() {
     });
     middlewares.push(logger);
   }
-  return createStore(rootReducer, applyMiddleware(...middlewares));
+  return createStore(rootReducer, defaultState, applyMiddleware(...middlewares));
 }

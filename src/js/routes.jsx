@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import { Router, Route, IndexRoute, useRouterHistory } from 'react-router';
 import { createHistory } from 'history'; // eslint-disable-line import/no-extraneous-dependencies
@@ -12,7 +13,12 @@ import HomePage from 'views/home/HomePage';
 import CountersPage from 'views/counters/CountersPage';
 import GamePage from 'views/game/GamePage';
 
-const store = configureStore();
+const storageStateKey = 'reduxState';
+const store = configureStore(JSON.parse(localStorage.getItem(storageStateKey)) || {});
+store.subscribe(_.throttle(() => {
+  localStorage.setItem(storageStateKey, JSON.stringify(store.getState()));
+}, 1000));
+
 const history = syncHistoryWithStore(useRouterHistory(createHistory)({
   basename: '/',
 }), store);
