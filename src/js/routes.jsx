@@ -19,7 +19,7 @@ store.subscribe(_.throttle(() => {
 }, 1000));
 
 const history = syncHistoryWithStore(useRouterHistory(createHistory)({
-  basename: '/',
+  basename: '/hearts-redux',
 }), store);
 
 export default function () {
