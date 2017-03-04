@@ -10,7 +10,6 @@ import AppContainer from 'views/app/AppContainer';
 import NotFoundPage from 'views/not-found/NotFoundPage';
 
 import HomePage from 'views/home/HomePage';
-import CountersPage from 'views/counters/CountersPage';
 import GamePage from 'views/game/GamePage';
 
 const storageStateKey = 'reduxState';
@@ -29,7 +28,6 @@ export default function () {
       <Router history={history}>
         <Route path="/" component={AppContainer}>
           <IndexRoute component={HomePage}/>
-          <Route path="/counter" component={CountersPage}/>
           <Route path="/game" component={GamePage}/>
           <Route path="*" component={NotFoundPage}/>
         </Route>

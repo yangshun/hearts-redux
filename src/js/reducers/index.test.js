@@ -10,7 +10,8 @@ describe('rootReducer', () => {
       type: 'DUMMY_ACTION',
     };
     const state = rootReducer(initialState, dummyAction);
-    expect(_.has(state, 'counter')).toBeTruthy();
     expect(_.has(state, 'routing')).toBeTruthy();
+    expect(_.has(state, 'playerScores')).toBeTruthy();
+    expect(_.has(state, 'currentHand')).toBeTruthy();
   });
 });
