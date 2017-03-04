@@ -1,5 +1,5 @@
 // @flow
-export type PlayerID = string;
+export type PlayerID = number;
 export type PlayerScores = {
   [id: PlayerID]: number,
 };
@@ -21,7 +21,7 @@ export type Trick = {
   number: number,
   ledByPlayer: PlayerID,
   currentPlayer: PlayerID,
-  cardsPlayed: Array<PlayedCard>,
+  cards: Array<PlayedCard>,
 };
 
 export type Player = {

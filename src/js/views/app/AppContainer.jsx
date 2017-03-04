@@ -22,14 +22,14 @@ export default function AppContainer(props: Props) {
           >
             <span className="navbar-toggler-icon"/>
           </button>
-          <a className="navbar-brand" href="/">React Redux Starter</a>
+          <a className="navbar-brand" href="/">Hearts</a>
           <div className="collapse navbar-collapse" id="navbar-supported-content">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
                 <Link className="nav-link" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/counter">Counter</Link>
+                <Link className="nav-link" to="/game">Game</Link>
               </li>
             </ul>
           </div>

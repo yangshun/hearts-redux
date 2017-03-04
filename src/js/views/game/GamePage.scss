@@ -1,0 +1,20 @@
+.player-idle {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.card {
+  &.allowed {
+    cursor: pointer;
+    opacity: 1;
+
+    &:hover {
+      color: limegreen;
+    }
+  }
+
+  &.not-allowed {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
