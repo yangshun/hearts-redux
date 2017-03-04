@@ -43,10 +43,12 @@ export class GamePage extends Component {
       <div>
         <div className="row">
           <div className="col-md-6">
-            <h6>Hand: {this.props.handNumber}</h6>
+            <h6>Hand: {this.props.handNumber + 1}</h6>
             {this.props.currentTrick &&
               <div>
-                <h6>Trick: {this.props.currentTrick.number + 1}</h6>
+                <h6>Trick: {this.props.currentTrick.number === 13 ? '-' :
+                  this.props.currentTrick.number + 1}
+                </h6>
                 <h6>Hearts Broken: {this.props.heartsBroken.toString()}</h6>
               </div>
             }
