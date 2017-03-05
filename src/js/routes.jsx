@@ -9,7 +9,6 @@ import configureStore from 'stores/configure-store';
 import AppContainer from 'views/app/AppContainer';
 import NotFoundPage from 'views/not-found/NotFoundPage';
 
-import HomePage from 'views/home/HomePage';
 import GamePage from 'views/game/GamePage';
 
 const storageStateKey = 'reduxState';
@@ -27,8 +26,7 @@ export default function () {
     <Provider store={store}>
       <Router history={history}>
         <Route path="/" component={AppContainer}>
-          <IndexRoute component={HomePage}/>
-          <Route path="/game" component={GamePage}/>
+          <IndexRoute component={GamePage}/>
           <Route path="*" component={NotFoundPage}/>
         </Route>
       </Router>
